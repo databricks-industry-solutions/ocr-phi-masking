@@ -16,7 +16,12 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install spark-nlp_display
+#run to hide log warnings
+#%%python
+
+import logging
+logger = spark._jvm.org.apache.log4j
+logging.getLogger("py4j.java_gateway").setLevel(logging.ERROR)
 
 # COMMAND ----------
 
@@ -307,7 +312,3 @@ displayHTML(html_str)
 # COMMAND ----------
 
 obfs_results_df.selectExpr('id','deid_text as deidentified_notes').write.mode("overWrite").save(f"{util.delta_path}/silver/obfuscated_notes")
-
-# COMMAND ----------
-
-
