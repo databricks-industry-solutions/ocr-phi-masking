@@ -11,6 +11,10 @@
 
 # COMMAND ----------
 
+# MAGIC %pip install transformers==4.22.1
+
+# COMMAND ----------
+
 import os
 import json
 import string

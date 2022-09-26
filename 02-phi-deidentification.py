@@ -16,8 +16,11 @@
 
 # COMMAND ----------
 
+# MAGIC %pip install transformers==4.22.1
+
+# COMMAND ----------
+
 #run to hide log warnings
-#%%python
 
 import logging
 logger = spark._jvm.org.apache.log4j
