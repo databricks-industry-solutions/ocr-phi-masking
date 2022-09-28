@@ -134,7 +134,7 @@ run_job = dbutils.widgets.get("run_job") == "True"
 
 # COMMAND ----------
 
-nsc.deploy_compute(job_json, run_job=run_job, wait=1800)
+nsc.deploy_compute(job_json, run_job=run_job, wait=3600)
 
 # COMMAND ----------
 
