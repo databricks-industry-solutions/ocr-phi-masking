@@ -24,23 +24,6 @@
 
 # COMMAND ----------
 
-# MAGIC %md
-# MAGIC ## Setup
-# MAGIC If you are new to Databricks, create an account at: https://databricks.com/try-databricks
-# MAGIC ### Turnkey John Snow Labs installation
-# MAGIC 
-# MAGIC Complete John Snow Labs onboarding form at: www.JohnSnowLabs.com/Databricks and speficy `Name`, `email`, `Databricks instance URL` and [access token](https://docs.databricks.com/dev-tools/api/latest/authentication.html#authentication-using-databricks-personal-access-tokens). Choose a cluster to install in, or install in a new one. Verify your email to start the installation
-# MAGIC 
-# MAGIC ### What does the turnkey John Snow Labs installation do?
-# MAGIC - Create a new Databricks cluster if needed
-# MAGIC - Install Spark NLP for Healthcare & Spark OCR
-# MAGIC - Generate a new 30-day free trial license key
-# MAGIC - Install the license key in the cluster
-# MAGIC - Load 20+ Python notebooks with examples
-# MAGIC - Email you once it’s all done
-
-# COMMAND ----------
-
 slides_html="""
 
 <iframe src="https://docs.google.com/presentation/d/1yR3oBKg8vvwKjvj4WWezf5ygJweo8rWuklD7IF4uVX0/embed?start=true&loop=true&delayms=4000" frameborder="0" width="900" height="560" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
