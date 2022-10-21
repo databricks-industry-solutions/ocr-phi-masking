@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/ocr-phi-masking. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/automated-phi-removal.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC # PHI de-identification 
 # MAGIC Under the Health Insurance Portability and Accountability Act (HIPAA) minimum necessary standard, HIPAA-covered entities (such as health systems and insurers) are required to make reasonable efforts to ensure that access to Protected Health Information (PHI) is limited to the minimum necessary information to accomplish the intended purpose of particular use, disclosure, or request.

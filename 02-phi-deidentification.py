@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/ocr-phi-masking. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/automated-phi-removal.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC # PHI De-identification
 # MAGIC 
