@@ -11,7 +11,7 @@
 # MAGIC 
 # MAGIC In this notebook we will:
 # MAGIC   - Import clinical notes in pdf format and store in delta
-# MAGIC   - Convert pdfs to imgage and improve mage quality
+# MAGIC   - Convert pdfs to image and improve image quality
 # MAGIC   - Extract text from pdfs and store resulting text data in delta 
 
 # COMMAND ----------
