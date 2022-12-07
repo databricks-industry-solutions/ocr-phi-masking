@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/ocr-phi-masking. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/automated-phi-removal.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC # PHI de-identification 
 # MAGIC Under the Health Insurance Portability and Accountability Act (HIPAA) minimum necessary standard, HIPAA-covered entities (such as health systems and insurers) are required to make reasonable efforts to ensure that access to Protected Health Information (PHI) is limited to the minimum necessary information to accomplish the intended purpose of particular use, disclosure, or request.
@@ -21,23 +26,6 @@
 # MAGIC  1. `pdf-ocr`: This notebook imports pdf files containing oncology reports and uses sparkOCR for image processing and text extraction. Resulting entities and text are stored in delta
 # MAGIC  2. `phi-deidentification`: In this notebook we use pre-trained models to extract phi and mask extracted phi. Resulting obfuscated clinical notes are stored in delta for downstream analysis. 
 # MAGIC  3. `config`: Utility notebook for setting up the environment
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC ## Setup
-# MAGIC If you are new to Databricks, create an account at: https://databricks.com/try-databricks
-# MAGIC ### Turnkey John Snow Labs installation
-# MAGIC 
-# MAGIC Complete John Snow Labs onboarding form at: www.JohnSnowLabs.com/Databricks and speficy `Name`, `email`, `Databricks instance URL` and [access token](https://docs.databricks.com/dev-tools/api/latest/authentication.html#authentication-using-databricks-personal-access-tokens). Choose a cluster to install in, or install in a new one. Verify your email to start the installation
-# MAGIC 
-# MAGIC ### What does the turnkey John Snow Labs installation do?
-# MAGIC - Create a new Databricks cluster if needed
-# MAGIC - Install Spark NLP for Healthcare & Spark OCR
-# MAGIC - Generate a new 30-day free trial license key
-# MAGIC - Install the license key in the cluster
-# MAGIC - Load 20+ Python notebooks with examples
-# MAGIC - Email you once it’s all done
 
 # COMMAND ----------
 
