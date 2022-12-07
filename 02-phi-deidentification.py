@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/ocr-phi-masking. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/automated-phi-removal.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC # PHI De-identification
 # MAGIC 
@@ -16,7 +21,15 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install spark-nlp_display
+# MAGIC %pip install transformers==4.22.1
+
+# COMMAND ----------
+
+#run to hide log warnings
+
+import logging
+logger = spark._jvm.org.apache.log4j
+logging.getLogger("py4j.java_gateway").setLevel(logging.ERROR)
 
 # COMMAND ----------
 
@@ -307,7 +320,3 @@ displayHTML(html_str)
 # COMMAND ----------
 
 obfs_results_df.selectExpr('id','deid_text as deidentified_notes').write.mode("overWrite").save(f"{util.delta_path}/silver/obfuscated_notes")
-
-# COMMAND ----------
-
-

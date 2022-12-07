@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/ocr-phi-masking. For more information about this solution accelerator, visit https://www.databricks.com/solutions/accelerators/automated-phi-removal.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC # Spark OCR in Healthcare
 # MAGIC 
@@ -8,6 +13,17 @@
 # MAGIC   - Import clinical notes in pdf format and store in delta
 # MAGIC   - Convert pdfs to imgage and improve mage quality
 # MAGIC   - Extract text from pdfs and store resulting text data in delta 
+
+# COMMAND ----------
+
+# MAGIC %pip install transformers==4.22.1
+
+# COMMAND ----------
+
+#To prevent undesired info from the outputs
+import logging
+logger = spark._jvm.org.apache.log4j
+logging.getLogger("py4j.java_gateway").setLevel(logging.ERROR)
 
 # COMMAND ----------
 
