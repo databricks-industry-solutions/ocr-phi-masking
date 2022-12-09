@@ -20,6 +20,13 @@
 
 # COMMAND ----------
 
+#To prevent undesired info from the outputs
+import logging
+logger = spark._jvm.org.apache.log4j
+logging.getLogger("py4j.java_gateway").setLevel(logging.ERROR)
+
+# COMMAND ----------
+
 import os
 import json
 import string
