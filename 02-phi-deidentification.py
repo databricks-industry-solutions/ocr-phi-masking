@@ -8,8 +8,8 @@
 # MAGIC # PHI De-identification
 # MAGIC 
 # MAGIC In this notebook we will:
-# MAGIC   - Extract PHI entites from extracted texts.
-# MAGIC   - Hide PHI entites and get an obfucated versions of pdf files.
+# MAGIC   - Extract PHI entities from extracted texts.
+# MAGIC   - Hide PHI entities and get an obfuscated versions of pdf files.
 # MAGIC 
 # MAGIC   
 # MAGIC see https://nlp.johnsnowlabs.com/2021/01/20/ner_deid_augmented_en.html for more information.
@@ -229,7 +229,7 @@ result_df=(
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC Let's count the number of entities we want to deidentificate and then see them.
+# MAGIC Let's count the number of entities we want to deidentify and then see them.
 
 # COMMAND ----------
 
@@ -253,27 +253,27 @@ result_df.selectExpr("explode(ner_chunk_res_meta) as cols").selectExpr("cols['ne
 
 # COMMAND ----------
 
-obfusated_text_df = (
+obfuscated_text_df = (
   result_df
   .selectExpr('id', "explode(sentence_deid_res) as cols")
   .selectExpr('id', "cols['sentence_result'] as sentence","cols['deidentified_result'] as deidentified")
 )
-obfusated_text_df.display()
+obfuscated_text_df.display()
 
 # COMMAND ----------
 
-obfusated_text_pdf=obfusated_text_df.toPandas()
-obfusated_text_pdf.iloc[4][['sentence','deidentified']]
+obfuscated_text_pdf=obfuscated_text_df.toPandas()
+obfuscated_text_pdf.iloc[4][['sentence','deidentified']]
 
 # COMMAND ----------
 
 # MAGIC %md
 # MAGIC ## 3. Getting Obfuscated Version of Each File
-# MAGIC Now we have obfuscated version of each file in dataframe. Each page is in diiferent page. Let's merge and save the files as txt.
+# MAGIC Now we have obfuscated version of each file in dataframe. Each page is in different page. Let's merge and save the files as txt.
 
 # COMMAND ----------
 
-obfs_results_df=obfusated_text_df.groupby('id').agg(
+obfs_results_df=obfuscated_text_df.groupby('id').agg(
   F.concat_ws(' ',F.collect_list('sentence')).alias('orig_text'),
   F.concat_ws(' ',F.collect_list('deidentified')).alias('deid_text'),
 )
