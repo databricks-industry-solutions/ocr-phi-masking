@@ -12,7 +12,7 @@
 # MAGIC 
 # MAGIC 1. Store clinical notes in pdf format in deltalake
 # MAGIC 2. Use [SparkOCR](https://nlp.johnsnowlabs.com/docs/en/ocr) to improve image quality and extract text from pdfs
-# MAGIC 3. Use [SparkNLP pre-trained models](https://nlp.johnsnowlabs.com/2020/08/04/deidentify_large_en.html) for phi extarction and de-identification
+# MAGIC 3. Use [SparkNLP pre-trained models](https://nlp.johnsnowlabs.com/2020/08/04/deidentify_large_en.html) for phi extraction and de-identification
 # MAGIC 
 # MAGIC 
 # MAGIC <img src="https://hls-eng-data-public.s3.amazonaws.com/img/phi-deid-ra.png" width=65%>

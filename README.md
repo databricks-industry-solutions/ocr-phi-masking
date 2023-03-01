@@ -5,7 +5,7 @@ In this solution accelerator we show how to use databricks lakehouse platform an
 
 1. Store clinical notes in pdf format in deltalake
 2. Use [SparkOCR](https://nlp.johnsnowlabs.com/docs/en/ocr) to improve image quality and extract text from pdfs
-3. Use [SparkNLP pre-trained models](https://nlp.johnsnowlabs.com/2020/08/04/deidentify_large_en.html) for phi extarction and de-identification
+3. Use [SparkNLP pre-trained models](https://nlp.johnsnowlabs.com/2020/08/04/deidentify_large_en.html) for phi extraction and de-identification
 
 
 <img src="https://hls-eng-data-public.s3.amazonaws.com/img/phi-deid-ra.png" width=65%>

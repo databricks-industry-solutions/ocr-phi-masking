@@ -210,7 +210,7 @@ print("\n".join([row.text for row in ocr_result_df.select("text").collect()[0:1]
 # MAGIC %md
 # MAGIC ### 1.1. Skew Correction
 # MAGIC 
-# MAGIC In some images, there may be some skewness and this reduces acuracy of the extracted text. Spark OCR has `ImageSkewCorrector` which detects skew of the image and rotates it. 
+# MAGIC In some images, there may be some skewness and this reduces accuracy of the extracted text. Spark OCR has `ImageSkewCorrector` which detects skew of the image and rotates it. 
 
 # COMMAND ----------
 
@@ -296,7 +296,7 @@ plt.show()
 # MAGIC %md
 # MAGIC ### 1.2. Image Processing
 # MAGIC 
-# MAGIC * After reading pdf files, we can process on images to increase the confidency.
+# MAGIC * After reading pdf files, we can process on images to increase the confidence.
 # MAGIC 
 # MAGIC * By **`ImageAdaptiveThresholding`**, we can compute a threshold mask image based on local pixel neighborhood and apply it to image. 
 # MAGIC 
@@ -326,7 +326,7 @@ skew_corrector = ImageSkewCorrector()\
       .setOutputCol("skew_corrected_image")\
       .setAutomaticSkewCorrection(True)
 
-# Binarize using adaptive tresholding
+# Binarize using adaptive thresholding
 binarizer = ImageAdaptiveThresholding()\
   .setInputCol("skew_corrected_image")\
   .setOutputCol("binarized_image")\
